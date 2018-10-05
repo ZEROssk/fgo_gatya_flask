@@ -1,7 +1,7 @@
 #coding:utf-8
 import numpy as np
 import random
-import time
+import os
 
 def GetRandom():
     random = np.random.choice(["Rank5 servant","Rank4 servant","Rank3 servant",
@@ -32,36 +32,33 @@ while sh1 == False or sh2 == False:    #２種最低保証チェック
             sh2 = True
             break
 
-for s in haisyutu:  #servant & reisou nameselect
-    if "Rank5 servant" in s:
-        nameselect5s = random.choice(["A","B"])
-        print(nameselect5s)
-
-    elif "Rank4 servant" in s:
-        nameselect4s = random.choice(["C","D"])
-        print(nameselect4s)
-
-    elif "Rank3 servant" in s:
-        nameselect3s = random.choice(["E","F"])
-        print(nameselect3s)
-
-    elif "Rank5 reisou" in s:
-        nameselect5r = random.choice(["G","H"])
-        print(nameselect5r)
-
-    elif "Rank4 reisou" in s:
-        nameselect4r = random.choice(["I","J"])
-        print(nameselect4r)
-
-    elif "Rank3 reisou" in s:
-        nameselect3r = random.choice(["K","L"])
-        print(nameselect3r)
-
 #表示
 print("\n10連ガチャ\n")
 
-for h in haisyutu:
-    print("\n",h)
+for s in haisyutu:  #servant & reisou nameselect
+    if "Rank5 servant" in s:
+        nameselect5s = random.choice(os.listdir("img/5servant"))
+        print(nameselect5s)
+
+    elif "Rank4 servant" in s:
+        nameselect4s = random.choice(os.listdir("img/4servant"))
+        print(nameselect4s)
+
+    elif "Rank3 servant" in s:
+        nameselect3s = random.choice(os.listdir("img/3servant"))
+        print(nameselect3s)
+
+    elif "Rank5 reisou" in s:
+        nameselect5r = random.choice(os.listdir("img/5reisou"))
+        print(nameselect5r)
+
+    elif "Rank4 reisou" in s:
+        nameselect4r = random.choice(os.listdir("img/4reisou"))
+        print(nameselect4r)
+
+    elif "Rank3 reisou" in s:
+        nameselect3r = random.choice(os.listdir("img/3reisou"))
+        print(nameselect3r)
 
 print("\n",count)
 
