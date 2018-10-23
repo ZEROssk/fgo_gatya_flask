@@ -2,16 +2,37 @@
 <html lang="ja">
 <head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/static/css/style.css">
 	<title>FGOストーリーガチャ</title>
 </head>
 
-<body bgcolor="#000"></body	
-
 <body>
 
-	{% for imageurl in imgurl %}
-		<img src="{{imageurl}}" width="600">
-	{% endfor %}
+	<p>
+		<table>
+			<tr>
+				{% for fimageurl in fimgurl %}
+					<td>
+						<img src="{{fimageurl}}" width="150">
+					</td>
+				{% endfor %}
+			</tr>
+		</table>
+
+		<table>
+			<tr>
+				{% for simageurl in simgurl %}
+					<td>
+						<img src="{{simageurl}}" width="150">
+					</td>
+				{% endfor %}
+			</tr>
+		</table>
+	</p>
+
+	<br>
+		<button>test</button>
+	</br>
 
 </body>
 </html>
