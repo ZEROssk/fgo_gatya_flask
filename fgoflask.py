@@ -1,4 +1,4 @@
-#oding:utf-8
+#coding:utf-8
 from flask import Flask, render_template, request, redirect, url_for
 import numpy as np
 import random
