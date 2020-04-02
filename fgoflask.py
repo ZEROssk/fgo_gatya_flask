@@ -1,4 +1,4 @@
-#coding:utf-8
+#oding:utf-8
 from flask import Flask, render_template, request, redirect, url_for
 import numpy as np
 import random
@@ -10,9 +10,10 @@ app = Flask(__name__)
 @app.route('/')
 def logick():
     def GetRandom():
-        random = np.random.choice(["Rank5 servant","Rank4 servant","Rank3 servant",
-                                   "Rank5 reisou","Rank4 reisou","Rank3 reisou"],
-                                p=[0.01, 0.03, 0.04, 0.12, 0.4, 0.4])
+        random = np.random.choice([
+            "Rank5 servant","Rank4 servant","Rank3 servant",
+            "Rank5 reisou","Rank4 reisou","Rank3 reisou"],
+            p=[0.01, 0.03, 0.04, 0.12, 0.4, 0.4])
         return random
 
     Check1 = False
